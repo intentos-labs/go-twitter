@@ -11,6 +11,10 @@ const (
 	rateLimit     = "x-rate-limit-limit"
 	rateRemaining = "x-rate-limit-remaining"
 	rateReset     = "x-rate-limit-reset"
+
+	rateLimit24H     = "X-User-Limit-24hour-Limit"
+	rateRemaining24H = "X-User-Limit-24hour-Remaining"
+	rateReset24H     = "X-User-Limit-24hour-Reset"
 )
 
 // Epoch is the UNIX seconds from 1/1/1970
@@ -26,6 +30,26 @@ type RateLimit struct {
 	Limit     int
 	Remaining int
 	Reset     Epoch
+}
+
+func rateFromHeader24H(header http.Header) *RateLimit {
+	limit, err := strconv.Atoi(header.Get(rateLimit24H))
+	if err != nil {
+		return nil
+	}
+	remaining, err := strconv.Atoi(header.Get(rateRemaining24H))
+	if err != nil {
+		return nil
+	}
+	reset, err := strconv.Atoi(header.Get(rateReset24H))
+	if err != nil {
+		return nil
+	}
+	return &RateLimit{
+		Limit:     limit,
+		Remaining: remaining,
+		Reset:     Epoch(reset),
+	}
 }
 
 func rateFromHeader(header http.Header) *RateLimit {
