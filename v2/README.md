@@ -1,6 +1,6 @@
 ![](https://img.shields.io/endpoint?url=https%3A%2F%2Ftwbadges.glitch.me%2Fbadges%2Fv2)
-[![golangci-lint](https://github.com/g8rswimmer/go-twitter/actions/workflows/golangci-lint.yml/badge.svg)](https://github.com/g8rswimmer/go-twitter/actions/workflows/golangci-lint.yml)
-[![go-test](https://github.com/g8rswimmer/go-twitter/actions/workflows/go-test.yml/badge.svg)](https://github.com/g8rswimmer/go-twitter/actions/workflows/go-test.yml)
+[![golangci-lint](https://github.com/intentos-labs/go-twitter/actions/workflows/golangci-lint.yml/badge.svg)](https://github.com/intentos-labs/go-twitter/actions/workflows/golangci-lint.yml)
+[![go-test](https://github.com/intentos-labs/go-twitter/actions/workflows/go-test.yml/badge.svg)](https://github.com/intentos-labs/go-twitter/actions/workflows/go-test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 # go-twitter v2
@@ -11,10 +11,10 @@ One of my co-workers said that when we were working on a project, released the f
 
 There will be `beta` releases throughout this process and if there are any new functionality requested, it will be discussed to try and get it into this version.  Version 1 will still be maintained as I believe that version 2 will need to be mature before the pervious version is even considered to be sunset.
 
-This [project](https://github.com/g8rswimmer/go-twitter/projects/1) will track the process of this initial version.
+This [project](https://github.com/intentos-labs/go-twitter/projects/1) will track the process of this initial version.
 
 ```
-go get -u github.com/g8rswimmer/go-twitter/v2
+go get -u github.com/intentos-labs/go-twitter/v2
 ```
 
 ## Table Of Contents
@@ -267,7 +267,7 @@ import (
 	"context"
 	"strings"
 
-	twitter "github.com/g8rswimmer/go-twitter/v2"
+	twitter "github.com/intentos-labs/go-twitter/v2"
 )
 
 type authorize struct {

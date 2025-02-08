@@ -8,7 +8,7 @@ import (
 	"log"
 	"net/http"
 
-	twitter "github.com/g8rswimmer/go-twitter/v2"
+	twitter "github.com/intentos-labs/go-twitter/v2"
 )
 
 type authorize struct {
@@ -19,9 +19,13 @@ func (a authorize) Add(req *http.Request) {
 	req.Header.Add("Authorization", fmt.Sprintf("Bearer %s", a.Token))
 }
 
-/**
+/*
+*
+
 	In order to run, the user will need to provide the bearer token and a query.
-**/
+
+*
+*/
 func main() {
 	token := flag.String("token", "", "twitter API token")
 	query := flag.String("query", "", "twitter query")
